@@ -1,0 +1,51 @@
+id: article_data_xml
+label: 'Article Data migration'
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: simple_xml
+  urls:
+    - https://feeds.feedburner.com/ndtvnews-top-stories.xml
+  item_selector: /rss/channel/item
+  fields:
+    -
+      name: guid
+      label: 'GUID'
+      selector: guid
+    -
+      name: title
+      label: 'Node Title'
+      selector: title
+    -
+      name: link
+      label: 'Link'
+      selector: link
+    -
+      name: created
+      label: 'Created Date'
+      selector: pubDate
+    - 
+      name: story_image_file
+      label: 'Image ID'
+      selector: media:content/@url
+  ids:
+    guid:
+      type: string
+process:
+  title:
+    plugin: concat
+    source:
+      - title
+  field_guid: guid
+  field_link: link
+  created:
+    plugin: callback
+    source: created
+    callable: strtotime
+    created: DateCreated
+  field_story_image_file:
+    plugin: file_import
+    source: story_image_file
+destination:
+  plugin: 'entity:node'
+  default_bundle: article

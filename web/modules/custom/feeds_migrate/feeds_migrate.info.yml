@@ -1,0 +1,10 @@
+type: module
+name: Feeds Migrate
+description: 'Migrate xml date into article content type.'
+package: Custom
+core_version_requirement: ^9.2 || ^10
+dependencies:
+  - drupal:migrate
+  - migrate_tools:migrate_tools
+  - migrate_plus:migrate_plus
+  - migrate_file:migrate_file
