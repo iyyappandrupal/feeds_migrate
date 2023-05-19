@@ -1,0 +1,21 @@
+uuid: 73e7c0c9-6b64-4df9-a1af-1e110ba46c7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_guid
+    - node.type.article
+_core:
+  default_config_hash: VysTQYnytpPwNhrrVH2SMNmvWNP3W7BFn8wOfynqJZQ
+id: node.article.field_guid
+field_name: field_guid
+entity_type: node
+bundle: article
+label: GUID
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,25 @@
+uuid: a86d11f0-3b91-4ec4-8ba5-9263c60c8a11
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - node
+_core:
+  default_config_hash: jkcTBAIMdATs8mOrjbOYi0cQkX9yK7geGinQ9-xADCY
+id: node.field_story_image_file
+field_name: field_story_image_file
+entity_type: node
+type: file
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: file
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,29 @@
+uuid: b4311585-a560-4463-aaca-ad50c118b9a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_story_image_file
+    - node.type.article
+  module:
+    - file
+_core:
+  default_config_hash: H24fIbvFgKUsBSABf2YIl-HNvwU_EnHhkJYrhDjrSk8
+id: node.article.field_story_image_file
+field_name: field_story_image_file
+entity_type: node
+bundle: article
+label: 'Story Image File'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: txt
+  max_filesize: ''
+  description_field: false
+field_type: file
